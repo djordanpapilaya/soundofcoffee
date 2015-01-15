@@ -1,0 +1,109 @@
+<html>
+<head>
+    <script src="libs/js/rainbow-custom.min.js"></script>
+    <script src="libs/js/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="$views/css/image.css">
+    <link rel="stylesheet" href="$views/css/list.css">
+    <link rel="stylesheet" href="$views/css/buttons.css">
+    <link rel="stylesheet" href="libs/css/main.css">
+    <script src="libs/js/cover-example.js"></script>
+    <script src="libs/js/main.js"></script>
+    <script>
+        require([
+            '$api/models',
+            '$views/list#List'
+        ], function(models, List) {
+            'use strict'
+            var doPlaylistForAlbum = function() {
+                var album = models.Playlist.fromURI('spotify:user:soundofcoffee:playlist:0PLeUzvkh1UDCurYkFt9bb');
+                var list = List.forAlbum(album, {minItemsForScroll: 5});
+                document.getElementById('playlistContainer').appendChild(list.node);
+                list.init();
+            };
+            doPlaylistForAlbum();
+        });
+    </script>
+    <script>
+        require([
+            '$api/models',
+            '$views/buttons'
+        ], function(models, buttons) {
+            'use strict';
+
+            var doShareButtonForArtist = function() {
+                var artist = models.Artist.fromURI('spotify:user:soundofcoffee:playlist:0PLeUzvkh1UDCurYkFt9bb');
+                var share = buttons.ShareButton.forArtist(artist);
+                document.getElementById('shareButton').appendChild(share.node);
+            };
+            var doSubscribeButton = function(){
+                var playlist = models.Playlist.fromURI('spotify:user:soundofcoffee:playlist:0PLeUzvkh1UDCurYkFt9bb');
+                var subscribe = buttons.SubscribeButton.forPlaylist(playlist);
+                document.getElementById('subscribeButton').appendChild(subscribe.node);
+            };
+            doShareButtonForArtist();
+            doSubscribeButton();
+        });
+    </script>
+    <script>
+        require([
+            '$api/models',
+            '$views/image#Image'
+        ], function (models, Image) {
+            'use strict';
+
+            var doCoverForAlbum3 = function () {
+                var albumUri = 'spotify:user:soundofcoffee:playlist:0PLeUzvkh1UDCurYkFt9bb';
+                var album = models.Album.fromURI(albumUri);
+                var image = Image.fromSource('libs/img/lattemachiatto.jpg', {width: 225, height: 225, player: true, link: 'macciato.html'});
+                document.getElementById('albumCoverContainer3').appendChild(image.node);
+                image.setDraggable(false);
+                image.setPlayer(true);
+            };
+            doCoverForAlbum3();
+        });
+    </script>
+</head>
+<body>
+<div id="tabbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="best_coffee.html">Best Coffee</a></li>
+        <li><a href="all_coffee.html">All Coffee</a></li>
+    </ul>
+</div>
+<div id="wrapper">
+        <header>
+            <img src="libs/img/soundofcoffee_logo_thmb.png" id="logo_header"/>
+
+            <h2>"Great Sound, Great Coffee"</h2>
+        </header>
+
+    <div class="section">
+        <div class="playlistHeader">
+
+            <a href="index.html"><div class="playlistBackButton">
+                <h2>Back To Home</h2>
+            </div></a>
+            <div class="playlistTitle">
+                <h2>Latte Macchiato</h2>
+            </div>
+            <div class="playlistShare">
+                <div id="shareButton" class="shareButton"></div>
+                <div id="subscribeButton" class="subscribeButton"></div>
+            </div>
+        </div>
+        <div class="playlistArtword">
+            <div id="albumCoverContainer3"></div>
+        </div>
+        <a href="all_coffee.html"><div class="playlistBackButton2">
+                <h2>All coffee</h2>
+        </div></a>
+        <div class="playlistContainer">
+            <div id="playlistContainer"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

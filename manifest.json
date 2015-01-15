@@ -1,0 +1,30 @@
+{
+    "AppName": {
+        "en": "Sound of Coffee"
+    },
+    "BundleIdentifier": "soundofcoffee",
+    "AppDescription": {
+        "en": "Great sound with great coffee"
+    },
+    "AppIcon": {
+        "18x18": "libs/img/icons/icon-18x18.png",
+        "32x32": "libs/img/icons/icon-32x32.png",
+        "64x64": "libs/img/icons/icon-64x64.png",
+        "128x128": "libs/img/icons/icon-128x128.png",
+        "300x300": "libs/mg/icons/icon-300x300.png"
+    },
+    "AcceptedLinkTypes": [
+        "playlist"
+    ],
+    "BundleType": "Application",
+    "BundleVersion": "0.2",
+    "Dependencies": {
+        "api": "1.38.0",
+        "views": "1.18.1"
+    },
+    "SupportedLanguages": [
+        "en",
+        "nl"
+    ],
+    "VendorIdentifier": "com.spotify"
+}

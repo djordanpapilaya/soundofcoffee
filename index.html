@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="libs/js/rainbow-custom.min.js"></script>
+    <script src="libs/js/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="$views/css/image.css">
+    <link rel="stylesheet" href="$views/css/list.css">
+    <link rel="stylesheet" href="$views/css/buttons.css">
+    <link rel="stylesheet" href="libs/css/main.css">
+    <link rel="stylesheet" href="libs/css/responsiveslides.css">
+    <script src="libs/js/responsiveslides.js"></script>
+    <script src="libs/js/main.js"></script>
+    <script>
+        $(document).ready(startSlider)
+
+        function startSlider() {
+
+            $("#slider1").responsiveSlides({
+                maxwidth: 900,
+                speed: 500
+            });
+        }
+        ;
+
+    </script>
+</head>
+<body>
+<div id="tabbar">
+    <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="best_coffee.html">Best Coffee</a></li>
+        <li><a href="all_coffee.html">All Coffee</a></li>
+    </ul>
+</div>
+<div id="wrapper">
+        <header>
+            <img src="libs/img/soundofcoffee_logo_thmb.png" id="logo_header"/>
+
+            <h2>"Great Sound, Great Coffee"</h2>
+        </header>
+
+    <div id="banner">
+        <ul class="rslides" id="slider1">
+            <li><a href="http://google.nl" target="_blank"><img src="libs/img/banner6.jpg" alt="banner img6"></a></li>
+            <li><img src="libs/img/banner1.jpg" alt="banner img1"></li>
+            <li><img src="libs/img/banner2.jpg" alt="banner img2"></li>
+            <li><img src="libs/img/banner3.jpg" alt="banner img3"></li>
+            <li><img src="libs/img/banner4.jpg" alt="banner img4"></li>
+            <li><img src="libs/img/banner5.jpg" alt="banner img5"></li>
+        </ul>
+    </div>
+    <div id="index" class="section">
+        <div id="covers">
+            <div class="CoverAlbumWidth">
+                <div id="albumCoverContainer"></div>
+            </div>
+
+            <div class="CoverAlbumWidth">
+                <div id="albumCoverContainer1"></div>
+            </div>
+            <div class="CoverAlbumWidth">
+                <div id="albumCoverContainer2"></div>
+            </div>
+            <div class="CoverAlbumWidth" id="coverWidth">
+                <div id="albumCoverContainer3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

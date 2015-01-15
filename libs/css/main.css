@@ -1,0 +1,390 @@
+/* Main Elements */
+#tabbar {
+    background: -moz-linear-gradient(top, #3b3b3b 0%, #222222 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b3b3b), color-stop(100%, #222222));
+    box-shadow: 0 1px 0 #000 inset;
+    height: 32px;
+    width: 101.7%;
+    font-size: 11px;
+    text-align: center;
+    margin: -10px;
+    opacity: 0.99;
+}
+
+#tabbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 32px;
+}
+
+#tabbar li {
+    display: inline-block;
+    margin: 7px 0 0;
+    cursor: pointer;
+    height: 32px;
+}
+
+#tabbar a {
+    color: #959595;
+    padding: 4px 10px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    cursor: default;
+    height: 50px;
+}
+
+#tabbar a:hover {
+    color: #f2f2f2;
+}
+
+#tabbar li.active a {
+    background: -moz-linear-gradient(top, #232323 0%, #151515 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #232323), color-stop(100%, #151515));
+    border: 1px solid #181818;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.6) inset;
+    color: #f2f2f2;
+}
+
+body {
+    font-family: 'Lucida Grande', Tahoma, Calibri, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.584;
+    color: #222;
+    background-color: #ecebe8;
+}
+
+a {
+    color: #333;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1, h2, h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6, .hdr-xxl, .hdr-xl, .hdr-l, .hdr-m, .hdr-sm, .hdr-xsm {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #343434;
+}
+
+.description {
+    font-size: 1.2em;
+}
+
+.reference {
+    padding: 0.5em 0;
+    font-size: .9em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#wrapper {
+    position: relative;
+    max-width: 900px;
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 40px;
+}
+
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+}
+
+body::before {
+    content: '.';
+    width: 99%;
+    height: 100%;
+    background: url('../img/soundoffcoffee_background.png') repeat-x bottom center;
+    background-color: #ece8e7;
+    background-size: 100%, 100%;
+    bottom: 0;
+    position: fixed;
+    opacity: 0.4;
+}
+
+/* Text */
+ul {
+    margin: 0 0 20px;
+}
+
+/* Player */
+#player {
+    min-height: 140px;
+}
+
+#player .sp-player {
+    float: left;
+    margin-right: 10px;
+}
+
+#player .sp-list {
+    width: inherit;
+    max-height: inherit;
+}
+
+/* Drop Box */
+#drop-box {
+    border: 4px dashed #333;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+}
+
+#drop-box.over {
+    opacity: 0.8;
+    border-color: #74c043;
+}
+
+/* Buttons */
+.buttons button {
+    margin: 0 20px 0 0;
+}
+
+body, html {
+    overflow: visible !important;
+}
+
+#cover {
+    margin: 0 auto;
+    width: 900px;
+    height: 200px;
+}
+
+.CoverAlbumWidth {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    margin-left: 0;
+    float: left;
+    display: inline;
+    margin-right: 33px;
+    overflow-x: hidden;
+    margin-bottom: 15px;
+}
+
+#albumCoverContainer1 {
+    display: inline;
+    float: left;
+}
+
+#albumCoverContainer2 {
+    display: inline;
+    float: left;
+}
+
+#albumCoverContainer3 {
+    display: inline;
+    float: left;
+}
+
+#coverWidth {
+    margin-right: 0;
+}
+
+#coverWidth1 {
+    margin-right: 0;
+}
+
+#albumCoverContainer {
+    display: inline;
+    float: left;
+}
+
+header {
+    height: 120px;
+    width: 100%;
+    display: block;
+    margin-top: -20px;
+    margin-left: 5px;
+}
+.playlistTitle{
+    float: left;
+    display: block;
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background-color: saddlebrown;
+}
+
+.playlistTitle h2{
+    margin-top: 10px;
+    color: white;
+}
+
+.playlistShare{
+    float: left;
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 10px;
+    border-radius: 4px;
+    background-color: saddlebrown;
+}
+
+.playlistBackButton{
+    float: left;
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background-color: saddlebrown;
+    -webkit-transition: all 1s ;-moz-transition: all 1s ;-ms-transition: all 1s ;-o-transition: all 1s ;transition: all 1s ;
+}
+.playlistBackButton:hover{
+    background-color: sandybrown;
+    -webkit-transition: all 1s ;-moz-transition: all 1s ;-ms-transition: all 1s ;-o-transition: all 1s ;transition: all 1s ;
+}
+
+.playlistBackButton h2{
+    margin-top: 10px;
+    color: white;
+}
+
+.playlistBackButton2{
+    float: left;
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-top: 260px;
+    margin-left: -225px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background-color: saddlebrown;
+    -webkit-transition: all 1s ;-moz-transition: all 1s ;-ms-transition: all 1s ;-o-transition: all 1s ;transition: all 1s ;
+}
+.playlistBackButton2:hover{
+    background-color: sandybrown;
+    -webkit-transition: all 1s ;-moz-transition: all 1s ;-ms-transition: all 1s ;-o-transition: all 1s ;transition: all 1s ;
+}
+
+.playlistBackButton2 h2{
+    margin-top: 10px;
+    color: white;
+}
+
+
+
+img#logo_header {
+    height: 70px;
+    width: 70px;
+    float: left;
+    margin-top: 30px;
+}
+
+header h2 {
+    float: left;
+    margin-top: 50px;
+    font-size: 2.2em;
+    margin-left: 20px;
+}
+
+#banner {
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    margin-top: -10px;
+}
+
+.coverCofeePlaylists {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    margin-left: 0;
+    float: left;
+    display: inline;
+    margin-right: 25px;
+    overflow-x: hidden;
+    float: left;
+}
+
+.shareBanner {
+    height: 75px;
+    width: 200px;
+    background-color: saddlebrown;
+    float: left;
+    margin-top: 15px;
+    border-radius: 4px;
+    margin-right: 25px;
+    display: inline
+}
+.playlistContainer{
+    width: 640px;
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.shareBanners {
+    display: inline;
+}
+
+#shareWidth {
+    margin-right: 0;
+}
+
+#shareWidth1 {
+    margin-right: 0;
+    float: left;
+}
+
+.shareBanner h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.2em;
+}
+
+.shareButton {
+    float: left;
+    margin-left: 10px;
+}
+
+.subscribeButton {
+    float: right;
+    margin-right: 10px;
+}
+
+.section{
+    width: 100%;
+    height: 100%;
+}
+
+.playlistArtword{
+    display: inline;
+    float: left;
+    margin-top: 20px;
+
+}
